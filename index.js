@@ -1,6 +1,10 @@
 $(document).ready(function() {
-    var accident_data = $.getJSON("final.json");
-    console.log(accident_data);
+    // var accident_data = $.getJSON("final.json");
+    var accident_data = [];
+    $.getJSON("final.json", function(data){
+        accident_data = data;
+        console.log(accident_data);
+    });
     d3.json("county.json", function(topodata) {
         var features = topojson.feature(topodata, topodata.objects.county).features;
         var prj = function(v) {
