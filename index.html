@@ -16,7 +16,22 @@
 
 <body>
 	<div id="data_type">民國 103年 交通事故數量</div>
-    <svg width="100%" height="700px" viewBox="0 0 700 350" preserveAspectRatio="xMidYMid"></svg>
+    <div width ='100%'>
+    <svg width="100%" height="700px" viewBox="0 0 700 350" preserveAspectRatio="xMidYMid">
+       <defs>
+          <linearGradient id="Ruler" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="5%" stop-color="#090" />
+          <stop offset="95%" stop-color="#F00" />
+       </defs>
+       <text x = "20" y = "70" style="font-size:10px">
+         <tspan>輕微 </tspan>
+         <tspan>(滑鼠移動至地圖上可顯示確切數據)</tspan>
+         <tspan>嚴重</tspan>
+       </text>
+       <rect width="200" height="15" x="20" y="80" stroke="#FFF" fill="url(#Ruler)"></rect>
+   </linearGradient>
+    </svg>
+	</div>
     <div id="info">
         <div id="name"></div>
         <div id="case"></div>
